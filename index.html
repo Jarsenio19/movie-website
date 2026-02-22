@@ -13,8 +13,11 @@
   <body>
     <header class="primary-header">
       <div class="container">
+        <div class="heading-searchbox-ul">
         <div class="nav-wrapper">
-        <a href="#"><img src="images/logo.png" alt="Logo"></a>
+        <div class="primary-logo">
+          <!-- <img src="images/logo1.png" alt=""> -->
+        </div>
         <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
           <img class="icon-hamburger" src="images/menus.png" alt="" aria-hidden="true">
           <img class="icon-close" src="images/close.png" alt="" aria-hidden="true">
@@ -32,24 +35,25 @@
         </nav>
         </div>
         <div class="primary-bttn">
-            <input type="text" style="display: none;" placeholder="Search..">
-            <button class="button" style="display: none;"><img src="images/bttn.png" alt=""></button>
+            <input class="display-sm-none display-md-inline-flex" type="text"  placeholder="Search..">
+            <button class="button | display-sm-none display-md-inline-flex"><img src="images/bttn.png" alt=""></button>
         </div>
-
+      </div>
      </div>
     </header>
-
     <main>
       <section class="padding-block-900">
         <div class="container">
-          <img src="images/logo.png" alt="Logo">
+          <div class="hero-wrapper">
+            <div class="image-logo"><img src="images/logo.png" alt=""></div>
           <div class="secondary-bttn">
               <input type="text" placeholder="Enter Movies or Series name">
               <button class="button">Search</button>
          </div>
-          <div>
+          <div class="third-bttn">
               <h2 class="fs-secondary-heading fw-bold text-neutral-100">JaysonMovies - Just a better place for watching online movies for free!</h2>
               <button class="button">Go to Home page</button>
+          </div>
           </div>
         </div>
       </section>
@@ -128,7 +132,7 @@
            </section>
     </main>
 
-    <footer class="bg-accent-800 text-neutral-200 padding-block-700">
+    <footer class="bg-accent-900 text-neutral-200 padding-block-700">
         <p>Copyright © 2026 JaysonMovies.to. All Rights Reserved</p>
     </footer>
  
