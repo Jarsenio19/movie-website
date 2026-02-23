@@ -184,7 +184,6 @@ body {
   align-items: center;
   border-radius: 8px;
   overflow: hidden;
-  width: 320px;
 }
 
 .primary-bttn input {
@@ -194,14 +193,19 @@ body {
   padding: 10px 20px;
   font-size: var(--fs-600);
   flex: 1;
+  left: 20px;
+  width: 150px;
+
 }
 
 .primary-bttn button {
+  
   border: none;
   border-radius: 0 8px 8px 0;
-  padding: 14px 15px;
+  padding: 10px;
   cursor: pointer;
   font-size: var(--fs-600);
+  flex-shrink: 0;
 
   width: 40px;
   height: 38px;
@@ -232,7 +236,7 @@ body {
   cursor: pointer;
   background-color: var(--clr-primary-400);
   
-  width: 70px;
+  max-width: 70px;
   height: 48px;
 }
 
@@ -253,11 +257,14 @@ body {
 
 /* Logo */
 
-/* .primary-logo {
+.primary-logo {
   cursor: pointer;
-  width: 300px;
+  width: 270px;
   height: auto;
-} */
+  flex: 0 0 auto;
+
+}
+
 
 
 
@@ -306,13 +313,14 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
 
+}
+/* 
 .image-logo {
   max-width: 40rem;
   height: auto;
   padding: auto;
-}
+} */
 
 .third-bttn {
   display: flex;
@@ -374,6 +382,10 @@ body {
 
   .mobile-nav-toggle .icon-close {
   display: none;
+  }
+
+  .primary-bttn {
+    display: none;
   }
 
 }
