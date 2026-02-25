@@ -4,6 +4,7 @@
 
     --clr-accent-800: hsl(228, 13%, 14%);
     --clr-accent-900: hsl(222.86, 15.56%, 8.82%);
+    --clr-accent-1000: hsl(0, 0%, 0%);
 
     --clr-neutral-100: hsl(13, 100%, 96%);
     --clr-neutral-200: hsl(208 14% 49%);
@@ -142,39 +143,17 @@ textarea:not([rows]) {
 }
 
 
-
-/* .even-columns {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.left {
-  max-width: 1000px;
-}
-
-.links {
-  display: flex;
-  
-}
-
-.column h4{
-  margin-bottom: 15px;
-
-}
-
-.column ul {
-  list-style: none;
-  text-decoration: none;
-} */
-
 /* general styling */
 
 body {
   font-size: var(--fs-body);
   font-family: var(--ff-body);
   color: var(--clr-neutral-200);
-  background-color: var(--clr-accent-800) ;
+  background: var(--clr-accent-800) ;
+}
+
+.p {
+  max-width: 35ch;
 }
 
 /* primary-button */
@@ -194,7 +173,7 @@ body {
   font-size: var(--fs-600);
   flex: 1;
   left: 20px;
-  width: 150px;
+  width: 200px;
 
 }
 
@@ -210,6 +189,12 @@ body {
   width: 40px;
   height: 38px;
 
+}
+
+@media(max-width: 70em) {
+  .primary-bttn{
+    display: none;
+  }
 }
 
 /* secondary-button */
@@ -240,6 +225,34 @@ body {
   height: 48px;
 }
 
+@media(max-width: 45em) {
+  .secondary-bttn {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 450px;
+}
+
+.secondary-bttn input {
+  border: none;
+  outline: none;
+  padding: 15px 50px;
+  font-size: var(--fs-600);
+  flex: 1;
+}
+
+.secondary-bttn button {
+  border: none;
+  border-radius: 0 8px 8px 0;
+  padding: 15px 10px;
+  cursor: pointer;
+  background-color: var(--clr-primary-400);
+  
+  max-width: 70px;
+  height: 48px;
+}
+}
+
 /* middle button */
 
 .button {
@@ -259,19 +272,50 @@ body {
 
 .primary-logo {
   cursor: pointer;
-  width: 270px;
-  height: auto;
-  flex: 0 0 auto;
+  padding: 3px 15px;
+  border-radius: 7px;
+  text-align: center;
 
+  background: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+  font-size: var(--size-700);
+  font-weight: var(--fw-bold);
 }
 
+.primary-logo a {
+  text-decoration: none;;
+}
 
+.secondary-logo {
+  cursor: default;
+  padding: 3px 15px;
+  border-radius: 7px;
+  text-align: center;
+  margin-bottom: 3rem;
+
+  background: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+  font-size: var(--size-900);
+  font-weight: var(--fw-bold);
+}
+
+.third-logo {
+  max-width: 11rem;
+  padding: 0 5px;
+  border-radius: 7px;
+  text-align: center;
+
+  background: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+  font-size: var(--size-700);
+  font-weight: var(--fw-bold);
+
+}
 
 
 /* navigator bar mobile */
 
 .primary-header {
-  margin-top: var(--size-700);
   border-bottom: 1px solid var(--clr-accent-900);
   box-shadow: 0 5px 12px var(--clr-accent-800);
 
@@ -313,34 +357,85 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
 }
-/* 
-.image-logo {
-  max-width: 40rem;
-  height: auto;
-  padding: auto;
-} */
 
 .third-bttn {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin: 1rem;
+
 }
 
 .third-bttn h2 {
   text-align: justify;
   text-justify: inter-word;
   margin-bottom: 1rem;
- 
+  max-width: 100%;
 }
+
+.third-bttn a {
+  text-decoration: none;
+}
+
+
+.carousel {
+  margin: auto;
+  width: 100%;
+  border: 5px solid red;
+  display: flex;
+  overflow-x: auto;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+.group-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  animation: spin 100s infinite linear;
+  padding: 1em;
+}
+
+.card {
+  flex: 0 0 25rem;
+  width: 4000px;
+  height: 25rem;
+  padding: 1em;
+  background: var(--clr-primary-400);
+  font-size: var(--size-600);
+  border-radius: .2em;
+  text-align: center;
+  align-content: center;
+}
+
+@keyframes spin {
+  from {translate: 0;}
+  to {translate: -100%;}
+}
+
+
+
+.carousel::scroll-button(right) {
+  content: 'Right';
+}
+
+
+
+
+
+
+
 
 
 /* mobile view */
 
-@media (max-width: 50em) {
+@media (max-width: 54em) {
   .primary-navigation {
     display: none;
 
@@ -388,14 +483,46 @@ body {
     display: none;
   }
 
+  /* Lower section */
+
+  .even-columns {
+    gap: 1rem;
+    max-width: 100%;
 }
 
+  .links {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    max-width:90%;
+    margin-right: 5rem;
+}
 
+  .links ul {
+    padding: 0;
+    margin: 0;
+}
+
+  .links ul li a {
+    text-decoration: none;
+}
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--clr-accent-1000);
+
+
+}
 
 
 /* Utility classes */
 
 /* https://a11y-guidelines.orange.com/en/articles/accessible-hiding/ */
+
+/* for mobile view if you click hamburger logo */
 
 .visually-hidden {
   position: absolute;
@@ -408,6 +535,77 @@ body {
   white-space: nowrap;
   border: 0;
 }
+
+.container {
+  --max-width: 1400px;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+.even-columns {
+  --max-width: 1500px;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+/* Margin for every div */
+:where(.flow :not(:first-child)) {
+  margin-top: var(--flow-spacer, 1rem) ;
+}
+
+/* for desktop view to remove navbar */
+.display-sm-none {
+  display: none;
+}
+
+@media (min-width: 55em) {
+  .display-md-inline-flex {
+    display: inline-flex;
+  }
+
+  .heading-searchbox-ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .even-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 100%;
+  }
+
+  .links {
+    display: flex;
+    gap: 4rem;
+    max-width: 100%;
+    margin-right: 5rem;
+  }
+
+  .column h2{
+    padding: 0;
+    width: 8rem;
+    margin-bottom: 10px;
+  }
+
+  .links ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .links ul li a {
+    text-decoration: none;
+  }
+
+}
+
+
+
 
 /* text color */
 
@@ -444,6 +642,10 @@ body {
 
 .bg-accent-900 {
     background-color: var(--clr-accent-900);
+}
+
+.bg-accent-1000 {
+    background-color: var(--clr-accent-1000);
 }
 
 .bg-neutral-100 {
@@ -514,30 +716,6 @@ body {
   padding-block: var(--size-900);
 }
 
-.display-sm-none {
-  display: none;
-}
-
-@media (min-width: 50em) {
-  .display-md-inline-flex {
-    display: inline-flex;
-  }
-
-  .heading-searchbox-ul {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-
-  }
-}
-
-.container {
-  --max-width: 1400px;
-  --padding: 1rem;
-
-  width: min(var(--max-width), 100% - (var(--padding) * 2));
-  margin-inline: auto;
-}
 
 
 
