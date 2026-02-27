@@ -2,6 +2,7 @@
 
     --clr-primary-400: hsl(187, 100%, 42%);
 
+    --clr-accent-100: hsl(240, 100%, .2%);
     --clr-accent-800: hsl(228, 13%, 14%);
     --clr-accent-900: hsl(222.86, 15.56%, 8.82%);
     --clr-accent-1000: hsl(0, 0%, 0%);
@@ -378,69 +379,57 @@ body {
   text-decoration: none;
 }
 
+/* Carousel */
 
 .carousel {
-  margin: auto;
-  width: 100%;
-  border: none;
-  display: flex;
-  overflow-x: auto;
+  position: relative;
+  height: 600px;
+  width: 100%; /* change it later for width 100% */
+  margin: 0 auto;
 }
 
-.carousel::-webkit-scrollbar {
-  display: none;
-}
-
-.group-carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1em;
-  animation: slide 1s linear infinite ;
-  padding: auto;
-}
-
-.card {
-  flex: 0 0 120rem;
-  max-width: 100%;
-  height: 30rem;
-
-  background: var(--clr-primary-400);
-  font-size: var(--size-600);
-  border-radius: .2em;
-  text-align: center;
-  align-content: center;
-
-}
-
-.card img {
-  display: block;
+.carousel-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-@keyframes slide {
-  from {transform: 0;}
-  to {transform: -100%;}
+.carousel-container {
+  background: green;
+  height: 90%;
+  position: relative;
 }
 
-.carousel:hover .group-carousel {
-  animation-play-state: paused;
+.carousel-track {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-
-.carousel::scroll-button(right) {
-  content: 'Right';
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
 }
 
+.carousel-bttn {
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: .25rem;
+  padding: 0 .5rem;
+  /* background-color: var(--clr-accent-100); */
 
 
 
 
 
-
-
+}
 
 /* mobile view */
 

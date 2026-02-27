@@ -43,24 +43,32 @@
     <main>
         <section aria-label="Movie photos">
             <div class="carousel">
-                <div class="group-carousel">
-                    <div class="card"><img src="images/carousel/Pat.jfif" alt=""></div>
-                    <div class="card">2</div>
-                    <div class="card">3</div>
-                    <div class="card">4</div>
-                    <div class="card">5</div>
-                    <div class="card">6</div>
-                </div>
-                <div aria-hidden class="group-carousel">
-                    <div class="card">1</div>
-                    <div class="card">2</div>
-                    <div class="card">3</div>
-                    <div class="card">4</div>
-                    <div class="card">5</div>
-                    <div class="card">6</div>
-                </div>
-            </div>
 
+                <button class="carousel-bttn prev">&#8656;</button>
+
+
+                <div class="carousel-container">
+                    <ul class="carousel-track">
+                        <li class="carousel-slide">
+                            <img class="carousel-image" src="images/carousel/Pat.jfif" alt="">
+                        </li>
+                        <li class="carousel-slide">
+                            <img class="carousel-image" src="images/carousel/Pat1.jfif" alt="">
+                        </li>
+                        <li class="carousel-slide">
+                            <img class="carousel-image" src="images/carousel/Pat2.jfif" alt="">
+                        </li>
+                    </ul>
+                </div>
+
+                <button class="carousel-bttn next">&#8658;</button>
+
+                <div class="carousel-nav">
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                </div>
+                </div>
         </section>
     </main>
 </body>
