@@ -43,13 +43,12 @@
     <main>
         <section aria-label="Movie photos">
             <div class="carousel">
-
-                <button class="carousel-bttn prev">&#8656;</button>
-
-
+                <button class="carousel__bttn carousel__bttn--left">
+                    <img src="images/carousel/back.png" alt="">
+                </button>
                 <div class="carousel-container">
                     <ul class="carousel-track">
-                        <li class="carousel-slide">
+                        <li class="carousel-slide current-slide">
                             <img class="carousel-image" src="images/carousel/Pat.jfif" alt="">
                         </li>
                         <li class="carousel-slide">
@@ -58,18 +57,29 @@
                         <li class="carousel-slide">
                             <img class="carousel-image" src="images/carousel/Pat2.jfif" alt="">
                         </li>
+                        <li class="carousel-slide">
+                            <img class="carousel-image" src="images/carousel/3.png" alt="">
+                        </li>
+                        <li class="carousel-slide">
+                            <img class="carousel-image" src="images/carousel/4.jpg" alt="">
+                        </li>
                     </ul>
+                    <div class="carousel-nav">
+                        <button class="carousel-indicator current-slide"></button>
+                        <button class="carousel-indicator"></button>
+                        <button class="carousel-indicator"></button>
+                        <button class="carousel-indicator"></button>
+                        <button class="carousel-indicator"></button>
+                    </div>
                 </div>
+                <button class="carousel__bttn carousel__bttn--right">
+                    <img src="images/carousel/next.png" alt="">
+                </button>
 
-                <button class="carousel-bttn next">&#8658;</button>
 
-                <div class="carousel-nav">
-                    <button class="carousel-indicator"></button>
-                    <button class="carousel-indicator"></button>
-                    <button class="carousel-indicator"></button>
-                </div>
                 </div>
         </section>
     </main>
+     <script type="module" src="carousel.js"></script>
 </body>
 </html>
