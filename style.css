@@ -383,9 +383,11 @@ body {
 
 .carousel {
   position: relative;
-  height: 800px;
+  height: 700px;
   width: 100%; /* change it later for width 100% */
-  margin: 0 auto;
+  margin:auto;
+  margin-top: 1px;
+
 }
 
 .carousel-image {
@@ -411,10 +413,8 @@ body {
 }
 
 @keyframes fadeIn {
-  to {opacity: 1;}
+  to {opacity: 1;} /* checking for it is working?*/
 }
-
-
 
 .carousel-slide {
   position: absolute;
@@ -471,11 +471,76 @@ body {
   background: var(--clr-accent-1000);
 }
 
+ /* Home box */
+.box-container {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  flex-wrap: wrap;
 
+  height: 100% ;
+  border: none;
+}
+
+.box {
+  border: none;
+  height: 220px;
+  width: 150px;
+  overflow: hidden;
+}
+
+.box p {
+  display: flex;
+  position: absolute;
+  bottom: -7rem;
+  left: 15rem;
+  justify-items: center;
+  
+
+  z-index: 2;
+}
+
+.badge {
+  z-index: 2;
+}
+
+.box img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  
+}
+
+@media(max-width: 54em) {
+  .box-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 2rem 2rem;
+    width: 100%;
+  }
+
+  .box {
+  border: 1px solid red;
+  height: 450px;
+  width: 350px;
+  overflow: hidden;
+
+  }
+  .box img {
+  width: 100%;
+  display: block;
+  height: auto;
+  border-radius: 10px;
+  }
+}
 
 /* mobile view */
 
 @media (max-width: 54em) {
+  /* Nav */
   .primary-navigation {
     display: none;
 
@@ -577,7 +642,7 @@ body {
 }
 
 .container {
-  --max-width: 1400px;
+  --max-width: 1500px;
   --padding: 1rem;
 
   width: min(var(--max-width), 100% - (var(--padding) * 2));
