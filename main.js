@@ -1,3 +1,4 @@
+
 // Nav bar for mobile
 const navToggle = document.querySelector(".mobile-nav-toggle");
 const primaryNav = document.querySelector(".primary-navigation");
@@ -11,7 +12,17 @@ navToggle.addEventListener('click', () => {
     }
     primaryNav.toggleAttribute("data-visible");
     });
+    
 
+const parent = document.querySelector(".mega-parent");
+const menu = document.querySelector(".mega-menu");
+
+parent.addEventListener("click", function(e) {
+    if (!BigInt.contains(e.target) && !menu.contains(e.target)){
+        menu.classList.remove("active");
+    }
+
+})
 // Carousel
 
 
