@@ -150,7 +150,13 @@ body {
   font-size: var(--fs-body);
   font-family: var(--ff-body);
   color: var(--clr-neutral-200);
-  background: var(--clr-accent-800) ;
+  background: var(--clr-accent-800);
+  
+}
+
+main {
+
+  min-height: 100vh;
 }
 
 .p {
@@ -326,8 +332,9 @@ body {
   color: var(--clr-neutral-100);
   font-size: var(--size-700);
   font-weight: var(--fw-bold);
-
+  
 }
+
 
 
 /* navigator bar mobile */
@@ -391,6 +398,7 @@ body {
   text-justify: inter-word;
   margin-bottom: 1rem;
   max-width: 100%;
+  
 }
 
 .third-bttn a {
@@ -613,6 +621,49 @@ body {
   transform: scale(1.1);
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  margin: var(--size-700);
+}
+
+.pagination a{
+  color: var(--clr-primary-400);
+  text-decoration: none;
+  border: 1px solid var(--clr-primary-400);
+  width: 40px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px 3px 0 0;
+  background: var(--clr-accent-900);
+}
+
+.pagination a.active {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+}
+
+.pagination a:hover:not(active) {
+  opacity: 0.9;
+}
+
+.pagination .next {
+  width: 70px;
+}
+
+.pagination .prev {
+  width: 70px;
+}
+
+
+
+
+
 
 /* @media(max-width: 60em) {
   .box-wrapper {
@@ -643,8 +694,7 @@ body {
     grid-template-columns: repeat(2,1fr);
     gap: 10px;
     padding: 0;
-    border: 1px solid red;
-      flex-shrink: 0;
+   
   }
 
   .box-container {
@@ -654,7 +704,7 @@ body {
   }
 
   .box {
-    border: 1px solid red;
+    border: none;
     height: 350px;
     width: 280px;
     overflow: hidden;
@@ -663,6 +713,9 @@ body {
   }
 /* nav */
 
+@media (max-width: 54em) {
+
+}
 
 .mega-menu {  
   position: absolute;
@@ -681,15 +734,12 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
-
 }
 
 .mega-column {
   display: flex;
   flex-direction: column;
   gap: 12px;
-
- 
 }
 
 .mega-column a {
@@ -816,10 +866,14 @@ body {
   white-space: nowrap;
   border: 0;
 }
+.text-decoration-none {
+  text-decoration: none;
+}
 
 .container {
   --max-width: 1500px;
   --padding: 1rem;
+
 
   width: min(var(--max-width), 100% - (var(--padding) * 2));
   margin-inline: auto;
@@ -828,6 +882,7 @@ body {
 .even-columns {
   --max-width: 1500px;
   --padding: 1rem;
+
 
   width: min(var(--max-width), 100% - (var(--padding) * 2));
   margin-inline: auto;
@@ -889,6 +944,7 @@ body {
 
 
 /* text color */
+
 
 .text-primary-400 {
     color: var(--clr-primary-400);
