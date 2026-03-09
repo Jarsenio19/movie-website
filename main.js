@@ -149,4 +149,4 @@ const autoPlay = () => {
     nextDot.classList.add('current-slide');
 };
 
-setInterval(autoPlay, 3000);
+setInterval(autoPlay, 10000);
