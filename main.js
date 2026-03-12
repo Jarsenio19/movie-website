@@ -150,3 +150,4 @@ const autoPlay = () => {
 };
 
 setInterval(autoPlay, 10000);
+
